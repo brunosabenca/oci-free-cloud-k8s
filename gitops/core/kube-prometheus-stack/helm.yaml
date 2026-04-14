@@ -110,7 +110,11 @@ spec:
           routes:
             - receiver: "null"
               matchers:
-                - alertname =~ "InfoInhibitor|Watchdog|KubeDaemonSetRolloutStuck"
+                - alertname =~ "InfoInhibitor|Watchdog"
+            - receiver: "null"
+              matchers:
+                - alertname = "KubeDaemonSetRolloutStuck"
+                - daemonset = "vcn-native-ip-cni"
         receivers:
           - name: "null"
           - name: "slack"
