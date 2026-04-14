@@ -78,4 +78,4 @@ spec:
                 provider: dex
                 oidc:
                   authorizationAccesses:
-                    - group: brunosabenca
+                    - group: bs-acme
