@@ -46,7 +46,7 @@ spec:
                   name: lychee-app-key
                   key: app-key
           ports:
-            - containerPort: 80
+            - containerPort: 8000
               name: http
           volumeMounts:
             - name: lychee-photos
