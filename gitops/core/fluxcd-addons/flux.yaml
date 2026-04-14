@@ -9,6 +9,8 @@ spec:
   prune: true
   dependsOn:
     - name: external-secrets
+    - name: kube-prometheus-stack
+    - name: envoy-gateway-config
   sourceRef:
     kind: GitRepository
     name: flux-system
