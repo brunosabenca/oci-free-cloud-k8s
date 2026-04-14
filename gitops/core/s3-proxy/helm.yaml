@@ -46,8 +46,8 @@ spec:
               clientID: s3-proxy
               clientSecret:
                 env: S3_PROXY_DEX_CLIENT_SECRET
-              issuerUrl: https://login.nce.wtf/dex/
-              redirectUrl: https://s3.nce.wtf/
+              issuerUrl: https://login.brunosabenca.com/dex/
+              redirectUrl: https://s3.brunosabenca.com/
               scopes:
                 - openid
                 - profile
@@ -57,8 +57,8 @@ spec:
           oracle:
             bucket:
               name: tourenbuch
-              region: eu-frankfurt-1
-              s3Endpoint: https://frrwy4uskhkj.compat.objectstorage.eu-frankfurt-1.oci.customer-oci.com
+              region: uk-london-1
+              s3Endpoint: https://lray0fqv9epr.compat.objectstorage.uk-london-1.oci.customer-oci.com
               credentials:
                 accessKey:
                   env: AWS_ACCESS_KEY_ID

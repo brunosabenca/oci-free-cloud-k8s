@@ -24,13 +24,9 @@ spec:
         name: teleport
       interval: 5m
   releaseName: teleport-cluster
-  valuesFrom:
-    - kind: ConfigMap
-      name: oci-lb-sg-id
-      valuesKey: values.yaml
   values:
     chartMode: standalone
-    clusterName: teleport.nce.wtf
+    clusterName: teleport.brunosabenca.com
     kubeClusterName: oci
     proxyListenerMode: multiplex
     auth:
@@ -59,8 +55,6 @@ spec:
         type: LoadBalancer
       annotations:
         service:
-          external-dns.alpha.kubernetes.io/hostname: teleport.nce.wtf
+          external-dns.alpha.kubernetes.io/hostname: teleport.brunosabenca.com
           oci.oraclecloud.com/load-balancer-type: "nlb"
           #          this does not work; the teleport chart doesn't support tpl
-          #          oci-network-load-balancer.oraclecloud.com/oci-network-security-groups: "{{ tpl .Values.oci.lbsecuritygroup . }}"
-          oci-network-load-balancer.oraclecloud.com/oci-network-security-groups: "ocid1.networksecuritygroup.oc1.eu-frankfurt-1.aaaaaaaauxhghg36xuzzjgw2awsd3cv4p2f2jedr5palq6fpy4exd53tve5a"
