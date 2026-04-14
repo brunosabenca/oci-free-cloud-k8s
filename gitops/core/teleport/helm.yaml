@@ -57,4 +57,4 @@ spec:
         service:
           external-dns.alpha.kubernetes.io/hostname: teleport.brunosabenca.com
           oci.oraclecloud.com/load-balancer-type: "nlb"
-          #          this does not work; the teleport chart doesn't support tpl
+          oci-network-load-balancer.oraclecloud.com/is-preserve-source: "false"
