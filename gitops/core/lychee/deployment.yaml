@@ -32,6 +32,10 @@ spec:
               value: sqlite
             - name: DB_DATABASE
               value: /conf/db.sqlite
+            - name: PHP_UPLOAD_MAX_FILESIZE
+              value: 100M
+            - name: PHP_POST_MAX_SIZE
+              value: 100M
           ports:
             - containerPort: 80
               name: http
