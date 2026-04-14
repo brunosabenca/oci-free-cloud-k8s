@@ -7,3 +7,4 @@ resources:
   - service.yaml
   - httproute.yaml
   - storage.yaml
+  - secret.yaml
