@@ -24,6 +24,17 @@ spec:
         name: teleport
       interval: 5m
   releaseName: teleport-cluster
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Service
+              name: teleport-cluster
+              namespace: teleport
+            patch: |
+              - op: replace
+                path: /spec/externalTrafficPolicy
+                value: Local
   values:
     chartMode: standalone
     clusterName: teleport.brunosabenca.com
@@ -53,7 +64,6 @@ spec:
         replicaCount: 1
       service:
         type: LoadBalancer
-        externalTrafficPolicy: Local
       annotations:
         service:
           external-dns.alpha.kubernetes.io/hostname: teleport.brunosabenca.com
