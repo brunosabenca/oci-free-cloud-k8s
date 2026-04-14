@@ -78,4 +78,4 @@ spec:
                 provider: dex
                 oidc:
                   authorizationAccesses:
-                    - group: bs-acme
+                    - group: bs-acme:admin
