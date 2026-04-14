@@ -58,7 +58,7 @@ spec:
         targets:
           oracle:
             bucket:
-              name: tourenbuch
+              name: media
               region: uk-london-1
               s3Endpoint: https://lray0fqv9epr.compat.objectstorage.uk-london-1.oci.customer-oci.com
               credentials:
