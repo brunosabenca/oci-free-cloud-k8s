@@ -25,8 +25,7 @@ spec:
   values:
     defaultSettings:
       storageMinimalAvailablePercentage: 10
-      storageOverProvisioningPercentage: 200
-      storageReservedPercentageForDefaultDisk: 10
+      storageReservedPercentageForDefaultDisk: 20
     persistence:
       defaultClassReplicaCount: 2
     ingress:
