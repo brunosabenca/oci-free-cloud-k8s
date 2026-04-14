@@ -51,7 +51,7 @@ spec:
         auth_url: https://login.brunosabenca.com/dex/auth
         token_url: https://login.brunosabenca.com/dex/token
         api_url: https://login.brunosabenca.com/dex/userinfo
-        role_attribute_path: contains(groups[*], 'nce-acme:admin') && 'Admin' || 'Viewer'
+        role_attribute_path: contains(groups[*], 'bs-acme:admin') && 'Admin' || 'Viewer'
 
     extraSecretMounts:
       - name: dex-grafana-client
