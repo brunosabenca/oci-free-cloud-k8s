@@ -28,6 +28,8 @@ spec:
           name: s3-proxy-credentials
       - secretRef:
           name: s3-proxy-dex-client
+    image:
+      repository: docker.io/oxynozeta/s3-proxy
     ingress:
       enabled: false
     prometheus:
@@ -76,4 +78,4 @@ spec:
                 provider: dex
                 oidc:
                   authorizationAccesses:
-                    - group: nce-acme:admin
+                    - group: brunosabenca
