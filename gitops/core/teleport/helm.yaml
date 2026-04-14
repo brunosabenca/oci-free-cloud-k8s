@@ -30,11 +30,13 @@ spec:
           - target:
               kind: Service
               name: teleport-cluster
-              namespace: teleport
             patch: |
-              - op: replace
-                path: /spec/externalTrafficPolicy
-                value: Local
+              apiVersion: v1
+              kind: Service
+              metadata:
+                name: teleport-cluster
+              spec:
+                externalTrafficPolicy: Local
   values:
     chartMode: standalone
     clusterName: teleport.brunosabenca.com
