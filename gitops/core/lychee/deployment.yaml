@@ -21,7 +21,7 @@ spec:
           image: docker.io/lycheeorg/lychee:v7.5.4
           env:
             - name: PHP_TZ
-              value: Europe/Berlin
+              value: Europe/London
             - name: APP_URL
               value: "https://img.brunosabenca.com"
             - name: APP_FORCE_HTTPS
